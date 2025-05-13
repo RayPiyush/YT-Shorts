@@ -3,6 +3,7 @@ import { uploadShortsAction } from '@/actions/upload-shorts'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import Upload from '@/components/uploadio'
 import React, { useActionState, useState } from 'react'
 
 const page = () => {
@@ -40,9 +41,10 @@ const page = () => {
                     )}
                 </div>
                 <div className='mb-4'>
-                    <Label>Upload File</Label>
+                    {/* <Label>Upload File</Label>
                     <Input type="file" name='video' className='mt-1'>
-                    </Input>
+                    </Input> */}
+                    <Upload/>
                     {formState.errors.video && (
                         <span className="text-red-500 text-sm">
                         {formState.errors.video}
